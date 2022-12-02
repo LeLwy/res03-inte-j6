@@ -1,0 +1,50 @@
+@import "vars";
+@import "reset";
+
+body{
+    
+    main{
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        
+        section{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            
+        }
+        
+        section:first-of-type{
+            
+            div:first-of-type{
+                background: linear-gradient(180deg, $darkBlue, $blue, $green);
+            }
+            
+            div:nth-of-type(2){
+                background: radial-gradient($darkBlue, $blue, $green);
+            }
+            
+            div:last-of-type{
+                background: radial-gradient($green, $blue, $darkBlue);
+            }
+            
+        }
+        
+        section:last-of-type{
+            
+            div:first-of-type{
+                background: radial-gradient($pink, $yellow, $green, $blue, $darkBlue);
+            }
+            
+            div:nth-of-type(2){
+                background: radial-gradient($pink, $yellow, $green, $blue, $darkBlue, $blue, $green, $yellow, $pink);
+            }
+            
+            div:last-of-type{
+                background: linear-gradient(225deg, $darkBlue, $blue, $green, $yellow, $pink);
+            }
+            
+        }
+    }
+    
+}
